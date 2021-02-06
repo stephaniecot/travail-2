@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ceci est un formulaire</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/css/site.css" />
+    
+</head>
+    
+    
+<body>
+   <div class="container">
+       <h1>Vos renseignements personnels</h1>
+        <form method="get" action="resultats.html" oninput='password2.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")'> <!-- Intégration de la fonction qui permet de valider le password -->
+            
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" class="form-control" placeholder="Prénom" name="prenom"  value="" required>
+            </div>
+            <script>
+            </script> 
+            <div class="form-group">
+                <label for="nom">Nom de famille:</label>
+                <input type="text"class="form-control" placeholder="Nom de famille" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" placeholder="Votre courriel" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" class="form-control" placeholder="Entrer votre mot de passe" name="password">
+            </div>            
+            <div class="form-group">
+                <label for="password2">Mot de passe (confirmation):</label>
+                <input type="password" id="confirm-password" class="form-control" placeholder="Entrer votre mot de passe à nouveau" name="password2">
+            </div>
+            <div class="form-group">
+                <label for="interet">Vos intérêts</label>
+                <select class="form-control" placeholder="Veuillez choisir" name="interet">
+                    <option selected>Veuillez choisir</option>
+                    <option value="sport">Sports</option>
+                    <option value="web">Développement web</option>
+                    <option value="autre">Autres</option>
+                </select> 
+            </div>
+            <div class="form-group">
+                <label for="sport-select">Sports:</label>
+                <select class="form-control" placeholder="Veuillez choisir" name="sport-select">
+                    <option selected>Veuillez choisir</option>
+                    <option value="karate">Karaté</option>
+                    <option value="rugby">Rugby</option>
+                    <option value="hockey">Hockey</option>
+                </select>   
+            </div>
+            <div class="form-group">
+                <label for="web-select">Développement web:</label>
+                <select class="form-control" placeholder="Veuillez choisir" name="seb-selct">
+                    <option selected>Veuillez choisir</option>
+                    <option value="front-end">Front-end</option>
+                    <option value="back-end">Back-end</option>
+                    <option value="fullstack">FullStack</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nom">Autre:</label>
+                <input type="text"class="form-control" placeholder="Vos intérêts" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="age">J'ai plus de 18 ans</label>
+                <input type="checkbox"class="form-control" style="Width:auto" name="age" required>
+            </div>
+                
+            <input type="submit" value="Modifier les renseignements" class="btn btn-lg btn-primary"/>
+            <input type="reset" value="Réinitialiser" class="btn btn-lg btn-default"/>
+       </form>
+   </div> 
+    
+ <!-- Règles    
+    <script>
+        var nombre = prompt("Veuillez inscrire un nombre" );
+                if ( nombre <= 3 && nombre >= 30 ){
+                    alert("Votre nom doit être compris entre 3 et 30 caractères");
+                }
+    </script>-->
+    
+</body>
+</html>
